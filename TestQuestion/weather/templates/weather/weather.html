@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <form method="get">
+        <input type="text" id="City" name="City" placeholder="Город">
+        <button type="submit" >Погода</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Дата
+                    и
+                    Время</th>
+                <th>Температура</th>
+                <th>Погода</th>
+            </tr>
+        </thead>
+        <tbody>
+             {% for row in table_data %}
+                <tr>
+                    <td>{{ row.0 }}</td>
+                    <td>{{ row.1 }}</td>
+                    <td><img src={{row.2.0}} alt={{row.2.1}}>{{row.2.1}}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+datetime
+openmeteo_requests
+requests_cache
+retry_requests
+Django==5.2.1
+Numpy
